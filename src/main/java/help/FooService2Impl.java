@@ -3,7 +3,7 @@ package help;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FooService2 {
+public class FooService2Impl implements FooService2{
 
 	public String function2(String p1, String p2) {
 		

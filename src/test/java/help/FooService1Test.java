@@ -3,12 +3,10 @@ package help;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @SpringBootTest
 public class FooService1Test {
@@ -23,5 +21,6 @@ public class FooService1Test {
     	Mockito.when(service2.function2("1", "2")).thenReturn("4");
     	String rt = service1.function1("1", "2");
         assertEquals("4", rt);
+        Mockito.verify(service2, Mockito.times(1)).function2("1", "2");
     }
 }

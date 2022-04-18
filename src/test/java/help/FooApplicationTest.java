@@ -1,9 +1,6 @@
 package help;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.MockedStatic;
-import org.mockito.Mockito;
-import org.springframework.boot.SpringApplication;
 
 public class FooApplicationTest {
     @Test
